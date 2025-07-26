@@ -44,31 +44,41 @@ All files must have consistent time-stamped entries for proper alignment.
 
 ```bash
 pip install numpy pandas scipy scikit-learn
+```
 
-### Step 2: Train the Model
+### **Step 2: Train the Model**
+
 Run the training script to preprocess data and train the classifier:
 
+```bash
 python train.py
+```
 
-This extracts features from the input CGM and insulin datasets, then trains a Decision Tree classifier.
-The model is saved as a serialized .pkl file using joblib.
+This extracts features from the input CGM and insulin datasets, then trains a Decision Tree classifier.  
+The model is saved as a serialized `.pkl` file using `joblib`.
 
-### Step 3: Test the Model
+### **Step 3: Test the Model**
+
 Use the testing script to generate predictions on unseen test data:
 
+```bash
 python test.py
-This saves a file named Result.csv containing binary predictions.
+```
 
-📊 Sample Output: Result.csv
+This saves a file named `Result.csv` containing binary predictions.
 
+### 📊 Sample Output: `Result.csv`
+
+```text
 1
 0
 0
 1
 1
 ...
+```
+
 Each line represents the prediction for a test instance:
 
-1 = meal detected
-
-0 = no meal
+- `1 = meal detected`  
+- `0 = no meal`
